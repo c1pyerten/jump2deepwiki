@@ -1,6 +1,6 @@
 # Jump to DeepWiki (Chrome Extension)
 
-On GitHub repository **home pages** (e.g. `https://github.com/owner/repo`), this extension injects a **DeepWiki** button into the right-side action buttons. Clicking it opens:
+On GitHub repository **home pages** (e.g. `https://github.com/owner/repo`), this extension injects a **DeepWiki** button into the right-side action buttons. Clicking it navigates to:
 
 `https://deepwiki.com/owner/repo`
 
@@ -18,4 +18,3 @@ Open any GitHub repo root page, e.g.:
 - `https://github.com/torvalds/linux`
 
 You should see a **DeepWiki** button near the Watch/Fork/Star buttons.
-

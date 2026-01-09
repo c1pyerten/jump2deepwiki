@@ -51,8 +51,6 @@
 
     const a = document.createElement("a");
     a.href = deepwikiUrl;
-    a.target = "_blank";
-    a.rel = "noopener noreferrer";
     a.className = "btn-sm btn";
     a.setAttribute("data-view-component", "true");
     a.setAttribute("aria-label", "Open DeepWiki for this repository");
