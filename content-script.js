@@ -62,16 +62,25 @@
   }
 
   function ensureButton() {
-    if (document.getElementById(BUTTON_LI_ID)) return;
-
     const actionsList = findActionsList();
     if (!actionsList) return;
+
+    const existing = document.getElementById(BUTTON_LI_ID);
+    if (existing) {
+      if (
+        existing.parentElement === actionsList &&
+        actionsList.firstElementChild !== existing
+      ) {
+        actionsList.prepend(existing);
+      }
+      return;
+    }
 
     const repo = getRepoFromPath(location.pathname);
     if (!repo?.owner || !repo?.repo) return;
 
     const deepwikiUrl = `${DEEPWIKI_ORIGIN}/${repo.owner}/${repo.repo}`;
-    actionsList.append(buildButtonLi(deepwikiUrl));
+    actionsList.prepend(buildButtonLi(deepwikiUrl));
   }
 
   function removeButton() {
