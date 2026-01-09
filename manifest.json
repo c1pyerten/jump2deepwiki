@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "Jump to DeepWiki",
+  "version": "0.1.0",
+  "description": "Adds a DeepWiki button to GitHub repository home pages.",
+  "content_scripts": [
+    {
+      "matches": ["https://github.com/*/*"],
+      "js": ["content-script.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
+
